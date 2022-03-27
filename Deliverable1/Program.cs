@@ -24,54 +24,61 @@ namespace Deliverable1
                 Console.WriteLine("How many people are we making P B and J sandwiches for?");
                 int sammiches = int.Parse(Console.ReadLine());
 
-                bread = sammiches * 2;
-                peanutButter = sammiches * 2;
-                jelly = sammiches * 4;
-
-                Console.WriteLine("");
-                Console.WriteLine("You'll need:");
-                Console.WriteLine($"\t{bread} slices of bread.");
-                Console.WriteLine($"\t{peanutButter} tablespoons of peanut butter.");
-                Console.WriteLine($"\t{jelly} teaspoons of jelly.");
-                Console.WriteLine("");
-                Console.WriteLine("Which is:");
-
-                loavesOfBread = (bread / 28);
-                if (loavesOfBread <= 1) 
+                if (sammiches >= 1)
                 {
-                    loavesOfBread = 1;
-                    Console.WriteLine($"\t{loavesOfBread} loaf of bread.");
-                        
+                    bread = sammiches * 2;
+                    peanutButter = sammiches * 2;
+                    jelly = sammiches * 4;
+
+                    Console.WriteLine("");
+                    Console.WriteLine("You'll need:");
+                    Console.WriteLine($"\t{bread} slices of bread.");
+                    Console.WriteLine($"\t{peanutButter} tablespoons of peanut butter.");
+                    Console.WriteLine($"\t{jelly} teaspoons of jelly.");
+                    Console.WriteLine("");
+                    Console.WriteLine("Which is:");
+
+                    loavesOfBread = (bread / 28);
+                    if (loavesOfBread <= 1)
+                    {
+                        loavesOfBread = 1;
+                        Console.WriteLine($"\t{loavesOfBread} loaf of bread.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\t{loavesOfBread} loaves of bread.");
+                    }
+
+                    jarsOfPeanutButter = (peanutButter / 32);
+                    if (jarsOfPeanutButter <= 1)
+                    {
+                        jarsOfPeanutButter = 1;
+                        Console.WriteLine($"\t{jarsOfPeanutButter} jar of peanut butter.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\t{jarsOfPeanutButter} jars of peanut butter.");
+                    }
+
+                    jarsOfJelly = (jelly / 48);
+                    if (jarsOfJelly <= 1)
+                    {
+                        jarsOfJelly = 1;
+                        Console.WriteLine($"\t{jarsOfJelly} jar of jelly.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\t{jarsOfJelly} jars of jelly.");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine($"\t{loavesOfBread} loaves of bread.");
+                    Console.WriteLine("");
+                    Console.WriteLine("Sorry, friend. We've got to have at least one person we're making sammiches for to calculate.");
                 }
-
-                jarsOfPeanutButter = (peanutButter / 32);
-                if (jarsOfPeanutButter <= 1)
-                {
-                    jarsOfPeanutButter = 1;
-                    Console.WriteLine($"\t{jarsOfPeanutButter} jar of peanut butter.");
-
-                }
-                else
-                {
-                    Console.WriteLine($"\t{jarsOfPeanutButter} jars of peanut butter.");
-                }
-
-                jarsOfJelly = (jelly / 48);
-                if (jarsOfJelly <= 1)
-                {
-                    jarsOfJelly = 1;
-                    Console.WriteLine($"\t{jarsOfJelly} jar of jelly.");
-
-                }
-                else
-                {
-                    Console.WriteLine($"\t{jarsOfJelly} jars of jelly.");
-                }
-
 
                 wannaRestart = true;
                 while (wannaRestart == true)
