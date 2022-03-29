@@ -42,7 +42,6 @@ namespace Deliverable1
                     loavesOfBread = Math.Ceiling(loavesOfBread);
                     if (loavesOfBread <= 1)
                     {
-                        loavesOfBread = 1;
                         Console.WriteLine($"\t{loavesOfBread} loaf of bread.");
 
                     }
@@ -55,7 +54,6 @@ namespace Deliverable1
                     jarsOfPeanutButter = Math.Ceiling(jarsOfPeanutButter);
                     if (jarsOfPeanutButter <= 1)
                     {
-                        jarsOfPeanutButter = 1;
                         Console.WriteLine($"\t{jarsOfPeanutButter} jar of peanut butter.");
 
                     }
@@ -64,11 +62,10 @@ namespace Deliverable1
                         Console.WriteLine($"\t{jarsOfPeanutButter} jars of peanut butter.");
                     }
 
-                    jarsOfJelly = jelly / 48;
+                    jarsOfJelly = (jelly / 48);
                     jarsOfJelly = Math.Ceiling(jarsOfJelly);
                     if (jarsOfJelly <= 1)
                     {
-                        jarsOfJelly = 1;
                         Console.WriteLine($"\t{jarsOfJelly} jar of jelly.");
 
                     }
