@@ -7,12 +7,12 @@ namespace Deliverable1
         static void Main(string[] args)
         {
             bool calculatingSammiches = true;
-            int bread;
-            int peanutButter;
-            int jelly;
-            int loavesOfBread;
-            int jarsOfPeanutButter;
-            int jarsOfJelly;
+            double bread;
+            double peanutButter;
+            double jelly;
+            double loavesOfBread;
+            double jarsOfPeanutButter;
+            double jarsOfJelly;
             bool wannaRestart;
 
             Console.WriteLine("Hello!");
@@ -39,6 +39,7 @@ namespace Deliverable1
                     Console.WriteLine("Which is:");
 
                     loavesOfBread = (bread / 28);
+                    loavesOfBread = Math.Ceiling(loavesOfBread);
                     if (loavesOfBread <= 1)
                     {
                         loavesOfBread = 1;
@@ -51,6 +52,7 @@ namespace Deliverable1
                     }
 
                     jarsOfPeanutButter = (peanutButter / 32);
+                    jarsOfPeanutButter = Math.Ceiling(jarsOfPeanutButter);
                     if (jarsOfPeanutButter <= 1)
                     {
                         jarsOfPeanutButter = 1;
@@ -62,7 +64,8 @@ namespace Deliverable1
                         Console.WriteLine($"\t{jarsOfPeanutButter} jars of peanut butter.");
                     }
 
-                    jarsOfJelly = (jelly / 48);
+                    jarsOfJelly = jelly / 48;
+                    jarsOfJelly = Math.Ceiling(jarsOfJelly);
                     if (jarsOfJelly <= 1)
                     {
                         jarsOfJelly = 1;
