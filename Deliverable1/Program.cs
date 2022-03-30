@@ -88,12 +88,12 @@ namespace Deliverable1
                     Console.WriteLine("Enter 'Y' for YES to Restart, or 'N' for NO to Exit the program.");
                     string input = Console.ReadLine().ToLower();
 
-                    if (input == "n")
+                    if (input == "n" || input == "no")
                     {
                         wannaRestart = false;
                         calculatingSammiches = false;
                     }
-                    else if (input == "y")
+                    else if (input == "y" || input == "yes")
                     {
                         wannaRestart = false;
                         calculatingSammiches = true;
